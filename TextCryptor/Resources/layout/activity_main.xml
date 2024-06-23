@@ -39,17 +39,19 @@
             android:layout_height="match_parent"
             android:id="@+id/linearLayout3" >
             <Button
-                android:text="Button"
+                android:text="Decrypt"
                 android:layout_height="match_parent"
-				android:layout_width="0dp"
-                android:id="@+id/button1"
-                android:layout_weight="5" />
+                android:layout_width="0dp"
+                android:id="@+id/btnDcrpt"
+                android:layout_weight="5"
+                android:layout_margin="10dp" />
             <Button
-                android:text="Button"
+                android:text="Encrypt"
                 android:layout_height="match_parent"
-				android:layout_width="0dp"
-                android:id="@+id/button2"
-                android:layout_weight="5" />
+                android:layout_width="0dp"
+                android:id="@+id/btnEcrpt"
+                android:layout_weight="5"
+                android:layout_margin="10dp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

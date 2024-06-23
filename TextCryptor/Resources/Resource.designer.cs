@@ -3582,10 +3582,10 @@ namespace TextCryptor
 			public const int browser_actions_menu_view = 2131230791;
 			
 			// aapt resource value: 0x7F080048
-			public const int button1 = 2131230792;
+			public const int btnDcrpt = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int button2 = 2131230793;
+			public const int btnEcrpt = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
 			public const int buttonPanel = 2131230794;
