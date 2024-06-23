@@ -16,20 +16,19 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout2" >
-            <TextView
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_height="450dp"
+            android:id="@+id/linearLayout2">
+			<EditText
+				android:text="Input"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:id="@+id/textView2" />
-            <TextView
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:id="@+id/txtInpt"/>
+                
+			<EditText
+                android:text="Result"
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
-                android:id="@+id/textView1" />
+                android:id="@+id/txtRslt" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"

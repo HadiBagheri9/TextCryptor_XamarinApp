@@ -4013,14 +4013,14 @@ namespace TextCryptor
 			// aapt resource value: 0x7F0800D2
 			public const int text2 = 2131230930;
 			
+			// aapt resource value: 0x7F0800D7
+			public const int textinput_counter = 2131230935;
+			
+			// aapt resource value: 0x7F0800D8
+			public const int textinput_error = 2131230936;
+			
 			// aapt resource value: 0x7F0800D9
-			public const int textinput_counter = 2131230937;
-			
-			// aapt resource value: 0x7F0800DA
-			public const int textinput_error = 2131230938;
-			
-			// aapt resource value: 0x7F0800DB
-			public const int textinput_helper_text = 2131230939;
+			public const int textinput_helper_text = 2131230937;
 			
 			// aapt resource value: 0x7F0800D3
 			public const int textSpacerNoButtons = 2131230931;
@@ -4032,49 +4032,49 @@ namespace TextCryptor
 			public const int textStart = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int textView1 = 2131230934;
+			public const int text_input_password_toggle = 2131230934;
 			
-			// aapt resource value: 0x7F0800D7
-			public const int textView2 = 2131230935;
+			// aapt resource value: 0x7F0800DA
+			public const int time = 2131230938;
 			
-			// aapt resource value: 0x7F0800D8
-			public const int text_input_password_toggle = 2131230936;
+			// aapt resource value: 0x7F0800DB
+			public const int title = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int time = 2131230940;
+			public const int titleDividerNoCustom = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int title = 2131230941;
+			public const int title_template = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int titleDividerNoCustom = 2131230942;
+			public const int top = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int title_template = 2131230943;
+			public const int topPanel = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int top = 2131230944;
+			public const int touch_outside = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int topPanel = 2131230945;
+			public const int transition_current_scene = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int touch_outside = 2131230946;
+			public const int transition_layout_save = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int transition_current_scene = 2131230947;
+			public const int transition_position = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int transition_layout_save = 2131230948;
+			public const int transition_scene_layoutid_cache = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int transition_position = 2131230949;
+			public const int transition_transform = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int transition_scene_layoutid_cache = 2131230950;
+			public const int txtInpt = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int transition_transform = 2131230951;
+			public const int txtRslt = 2131230951;
 			
 			// aapt resource value: 0x7F0800E8
 			public const int @unchecked = 2131230952;
