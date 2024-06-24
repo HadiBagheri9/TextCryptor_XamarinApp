@@ -7,9 +7,9 @@ using Android.App;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TextCryptor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Mohammad Hadi Bagheri")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Mohammad Hadi Bagheri")]
 [assembly: AssemblyProduct("TextCryptor")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

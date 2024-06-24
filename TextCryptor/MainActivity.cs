@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using System;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -6,6 +7,8 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using System.Text;
 using static Android.Views.View;
+using System.Security.Cryptography;
+using System.IO;
 
 namespace TextCryptor
 {
@@ -33,7 +36,14 @@ namespace TextCryptor
 
             txtInpt = FindViewById<EditText>(Resource.Id.txtInpt);
             txtRslt = FindViewById<EditText>(Resource.Id.txtRslt);
+            txtInpt.Click += TxtInpt_Click;
         }
+
+        private void TxtInpt_Click(object sender, EventArgs e)
+        {
+            txtInpt.Text = "";
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -45,12 +55,29 @@ namespace TextCryptor
         {
             if (v.Id == Resource.Id.btnEcrpt)
             {
-
+                txtRslt.Text = Enc(txtInpt.Text);
             }
             else if (v.Id == Resource.Id.btnDcrpt)
             {
-
+                txtRslt.Text = Dc(txtInpt.Text);
             }
+        }
+
+        public string Enc(string text)
+        {
+            byte[] encodedBytes = Encoding.UTF8.GetBytes(text);
+            string encodedString = Convert.ToBase64String(encodedBytes);
+            return encodedString;
+            // Decryption (reversible)
+            //string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(encodedString));
+
+        }
+
+        public string Dc(string text)
+        {
+            string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(text));
+
+            return decodedString;
         }
     }
 }
