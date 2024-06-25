@@ -7,6 +7,7 @@ using Android.Widget;
 using AndroidX.AppCompat.App;
 using System.Text;
 using static Android.Views.View;
+using Android.Content;
 using System.Security.Cryptography;
 using System.IO;
 
@@ -21,7 +22,9 @@ namespace TextCryptor
         StringBuilder inpt = new StringBuilder("");
         StringBuilder rslt = new StringBuilder("");
 
+#pragma warning disable CS0414 // The field 'MainActivity.flag' is assigned but its value is never used
         int flag = 0;
+#pragma warning restore CS0414 // The field 'MainActivity.flag' is assigned but its value is never used
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -65,19 +68,29 @@ namespace TextCryptor
 
         public string Enc(string text)
         {
+            
+            
             byte[] encodedBytes = Encoding.UTF8.GetBytes(text);
             string encodedString = Convert.ToBase64String(encodedBytes);
             return encodedString;
-            // Decryption (reversible)
-            //string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(encodedString));
+            
+            
 
         }
 
         public string Dc(string text)
         {
-            string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(text));
+            try
+            {
+                string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(text));
 
-            return decodedString;
+                return decodedString;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            
         }
     }
 }
