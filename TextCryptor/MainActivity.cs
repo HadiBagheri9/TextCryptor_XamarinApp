@@ -50,36 +50,51 @@ namespace TextCryptor
         {
             if (v.Id == Resource.Id.btnEcrpt)
             {
-                txtRslt.Text = Enc(txtInpt.Text);
+                txtRslt.Text = Enc(txtInpt.Text, 6);
             }
             else if (v.Id == Resource.Id.btnDcrpt)
             {
-                txtRslt.Text = Dc(txtInpt.Text);
+                txtRslt.Text = Dc(txtInpt.Text, 6);
             }
         }
 
-        public string Enc(string text)
+        public string Enc(string text, int layers)
         {
             byte[] encodedBytes = Encoding.UTF8.GetBytes(text);
             string encodedString = Convert.ToBase64String(encodedBytes);
+            string encS = encodedString;
+            byte[] encB = Encoding.UTF8.GetBytes(encS);
 
-            return encodedString;
+            for (int i = 1; i < layers; i++)
+            {
+                encS = Convert.ToBase64String(encB);
+                encB = Encoding.UTF8.GetBytes(encS);
+            }
+
+            return encS;
 
         }
 
-        public string Dc(string text)
+        public string Dc(string text, int layers)
         {
             try
             {
-                string decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(text));
+                string decodedString = text;
+                for (int i = 0; i < layers; i++)
+                {
+                    decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(decodedString));
+
+                }
 
                 return decodedString;
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                Toast.MakeText(this.ApplicationContext, ex.Message, ToastLength.Long).Show();
+
+                return "";
             }
-            
+
         }
     }
 }
